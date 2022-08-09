@@ -1,0 +1,31 @@
+{
+  "name": "string-therapy",
+  "version": "0.0.1",
+  "description": "A small but convinient tool to convert your strings to a more code friendly format and back. Useful for dynamic content and helpful for maintaining consistency between your keys, variables and id's.",
+  "main": "lib",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furcht/string-therapy"
+  },
+  "keywords": [
+    "string",
+    "camel",
+    "case",
+    "snake",
+    "kebab",
+    "pascal",
+    "keys",
+    "conversions"
+  ],
+  "author": "RV3",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.6.1"
+  },
+  "files": [
+    "lib/index.js"
+  ]
+}
