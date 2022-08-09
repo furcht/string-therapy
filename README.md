@@ -24,32 +24,37 @@ newString.toCamelCase(); //- outputs: yourNewString
 ### toCamelCase() ###
 Converts your string to Camel Case format, possibly the most common format in Javascript.
 ```
+const st = require("string-therapy");
 let newString = new st("Some String");
-st.toCamelCase(); //- Outputs: someString
+newString.toCamelCase(); //- Outputs: someString
 ```
 ### toPascalCase() ###
 Converts your string to Pascal Case format, used often for class naming and templates.
 ```
+const st = require("string-therapy");
 let newString = new st("Some String");
-st.toCamelCase(); //- Outputs: SomeString
+newString.toPascalCase(); //- Outputs: SomeString
 ```
 ### toKebabCase() ###
 Converts your string to Kebab Case format, used often in CSS.
 ```
+const st = require("string-therapy");
 let newString = new st("Some String");
-st.toCamelCase(); //- Outputs: some-string
+newString.toKebabCase(); //- Outputs: some-string
 ```
 ### toSnakeCase() ###
 Converts your string to Snake Case format, often found for ID's and DB related keys.
 ```
+const st = require("string-therapy");
 let newString = new st("Some String");
-st.toCamelCase(); //- Outputs: some_string
+newString.toCamelCase(); //- Outputs: some_string
 ```
 ### toEnglish() ###
 Not actually english but you get the gist, it's supposed to convert your already code friendly strings to "english" format with spaces and all.
 ```
+const st = require("string-therapy");
 let newString = new st("camelCaseString");
-st.toCamelCase(); //- Outputs: Camel case string
+newString.toEnglish(); //- Outputs: Camel case string
 ```
 
 ### Log ###
