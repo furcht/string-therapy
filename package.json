@@ -1,6 +1,6 @@
 {
   "name": "string-therapy",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A small but convinient tool to convert your strings to a more code friendly format and back. Useful for dynamic content and helpful for maintaining consistency between your keys, variables and id's.",
   "main": "lib",
   "scripts": {
