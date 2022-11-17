@@ -13,6 +13,8 @@ Next up, just add it into your project and use away!
 ```
 //-- slap this package into your project
 const st = require("string-therapy");
+//-or-//
+import st from "string-therapy";
 
 //-- initiate it with your string
 let newString = new st("Your New string");
@@ -60,5 +62,7 @@ newString.toEnglish(); //- Outputs: Camel case string
 ```
 
 ### Log ###
+- 1.0.0 - Support for digits at end of string and corrected issue detecting an underscore (_) in conversions
+- 0.1.0 - Declaration file for "import" support
 - 0.0.2 - README added
 - 0.0.1 - First Publish

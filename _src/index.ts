@@ -1,12 +1,6 @@
-interface StringTherapyInterface {
-    toCamelCase():string;
-    toPascalCase():string;
-    toSnakeCase():string;
-    toKebabCase():string;
-    toEnglish():string;
-}
+import StringInterface from "./index.d";
 
-export default class StringTherapy extends String implements StringTherapyInterface {
+export default class StringTherapy extends String implements StringInterface {
     constructor(
         private value:string
     ) {
@@ -19,18 +13,18 @@ export default class StringTherapy extends String implements StringTherapyInterf
      */
     public toCamelCase() {
         // remove spaces at ends
-        let str = this.value.trim();
+        let str = this.value.trim().toLowerCase();
 
         // remove special characters or digits at beginning of string
-        str = str.replace(/^(?:\W+|\d)+/g, '');
+        str = str.replace(/^(?:\W+|\d)+/g, '').replace("_","-");
 
         // find and replace all first character casing
-        str = str.replace(/(?:^\w|[A-Z]|\b\w)/g, (letter, index) => {
+        str = str.replace(/(?:^\w|[A-Z_]|\b\w)/g, (letter, index) => {
             return index == 0 ? letter.toLowerCase() : letter.toUpperCase();
         })
 
         // remove any remaining non-word characters
-        return str.replace(/(?:\W|_)+/g, '');
+        return str.replace(/(?:\W)+/g, '');
     }
 
     /**
@@ -39,10 +33,10 @@ export default class StringTherapy extends String implements StringTherapyInterf
      */
     public toPascalCase() {
         // remove spaces at ends
-        let str = this.value.trim();
+        let str = this.value.trim().toLowerCase();
 
         // remove special characters or digits at beginning of string
-        str = str.replace(/^(?:\W+|\d|_)+/g, '');
+        str = str.replace(/^(?:\W+|\d|_)+/g, '').replace("_","-");
 
         // find and replace all first character casing
         str = str.replace(/(?:^\w|[A-Z]|\b\w)/g, (letter) => {
@@ -61,8 +55,8 @@ export default class StringTherapy extends String implements StringTherapyInterf
         // remove spaces at ends and lower case all characters
         let str = this.value.trim().toLowerCase();
 
-        // remove special characters or digits at beginning or end of string
-        str = str.replace(/^(?:\W+|\d|_)+|(?:\W+|\d)+$/g, '');
+        // remove special characters or digits at beginning of string
+        str = str.replace(/^(?:\W+|\d)+/g, '');
 
         // convert remaining characters to "_"
         return str.replace(/\W+/g,"_");
@@ -76,8 +70,8 @@ export default class StringTherapy extends String implements StringTherapyInterf
         // remove spaces at ends and lower case all characters
         let str = this.value.trim().toLowerCase();
 
-        // remove special characters or digits at beginning or end of string
-        str = str.replace(/^(?:\W+|\d|_)+|(?:\W+|\d)+$/g, '');
+        // remove special characters or digits at beginning of string
+        str = str.replace(/^(?:\W+|\d)+/g, '');
 
         // convert remaining characters to "-"
         return str.replace(/(?:\W|_)+/g,"-");
@@ -109,5 +103,4 @@ export default class StringTherapy extends String implements StringTherapyInterf
         return str.replace(/\W|_/g, ' ');
     }
 }
-
 module.exports = StringTherapy;
