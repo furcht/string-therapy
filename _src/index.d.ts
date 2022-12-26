@@ -1,4 +1,4 @@
-export declare module "string-therapy";
+declare module "string-therapy";
 export default interface StringTherapyInterface {
     get toCamelCase():string;
     get toPascalCase():string;

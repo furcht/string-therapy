@@ -1,5 +1,5 @@
 import ST from "./index.d";
-declare class StringTherapy extends String implements ST {
+export declare class StringTherapy extends String implements ST {
     private value;
     constructor(value: string);
     /**
@@ -29,4 +29,3 @@ declare class StringTherapy extends String implements ST {
     get toEnglish(): string;
 }
 export default function Init(str: string): StringTherapy;
-export {};

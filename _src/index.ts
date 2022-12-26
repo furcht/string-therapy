@@ -1,6 +1,6 @@
 import ST from "./index.d";
 
-class StringTherapy extends String implements ST {
+export class StringTherapy extends String implements ST {
     private value:string;
 
     constructor(value:string) {
