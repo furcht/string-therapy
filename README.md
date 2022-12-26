@@ -14,7 +14,7 @@ Next up, just add it into your project and use away!
 //-- slap this package into your project
 const st = require("string-therapy");
 //-or-//
-import st from "string-therapy";
+import st, {StringTherapy} from "string-therapy";
 
 //-- initiate it with your string
 let newString = st("Your New string");
