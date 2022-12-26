@@ -62,6 +62,7 @@ newString.toEnglish; //- Outputs: Camel case string
 ```
 
 ### Log ###
+- 2.1.0 - Corrected "import"
 - 2.0.0 - Using "getter" methods to help make things simpler
 - 1.0.0 - Support for digits at end of string and corrected issue detecting an underscore (_) in conversions
 - 0.1.0 - Declaration file for "import" support
