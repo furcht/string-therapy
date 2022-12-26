@@ -1,6 +1,6 @@
 import StringInterface from "./index.d";
 
-export default class StringTherapy extends String implements StringInterface {
+class StringTherapy extends String implements StringInterface {
     constructor(
         private value:string
     ) {
@@ -11,7 +11,7 @@ export default class StringTherapy extends String implements StringInterface {
      * Converts your string to Camel Case format
      * @returns {string} Some String -> someString
      */
-    public toCamelCase() {
+    get toCamelCase() {
         // remove spaces at ends
         let str = this.value.trim().toLowerCase();
 
@@ -31,7 +31,7 @@ export default class StringTherapy extends String implements StringInterface {
      * Converts your string to Pascal Case format
      * @returns {string} Some String -> SomeString
      */
-    public toPascalCase() {
+    get toPascalCase() {
         // remove spaces at ends
         let str = this.value.trim().toLowerCase();
 
@@ -51,7 +51,7 @@ export default class StringTherapy extends String implements StringInterface {
      * Converts your string to Snake Case format
      * @returns {string} Some String -> some_string
      */
-    public toSnakeCase() {
+    get toSnakeCase() {
         // remove spaces at ends and lower case all characters
         let str = this.value.trim().toLowerCase();
 
@@ -66,7 +66,7 @@ export default class StringTherapy extends String implements StringInterface {
      * Converts your string to Kebab Case format
      * @returns {string} Some String -> some-string
      */
-    public toKebabCase() {
+    get toKebabCase() {
         // remove spaces at ends and lower case all characters
         let str = this.value.trim().toLowerCase();
 
@@ -81,7 +81,7 @@ export default class StringTherapy extends String implements StringInterface {
      * Reverts a string to an english style format
      * @returns {string} Reverts string (someString -> Some string)
      */
-    public toEnglish() {
+    get toEnglish() {
         // remove spaces at ends and lower case all characters
         let str = this.value.trim().toLowerCase();
 
@@ -103,4 +103,9 @@ export default class StringTherapy extends String implements StringInterface {
         return str.replace(/\W|_/g, ' ');
     }
 }
-module.exports = StringTherapy;
+
+function Init(str:string):StringTherapy {
+    return new StringTherapy(str);
+}
+
+exports.default = module.exports = Init;

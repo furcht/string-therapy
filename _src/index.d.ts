@@ -1,8 +1,8 @@
 export declare module "string-therapy";
 export default interface StringTherapyInterface {
-    toCamelCase():string;
-    toPascalCase():string;
-    toSnakeCase():string;
-    toKebabCase():string;
-    toEnglish():string;
+    get toCamelCase():string;
+    get toPascalCase():string;
+    get toSnakeCase():string;
+    get toKebabCase():string;
+    get toEnglish():string;
 }
