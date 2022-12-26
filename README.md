@@ -17,51 +17,52 @@ const st = require("string-therapy");
 import st from "string-therapy";
 
 //-- initiate it with your string
-let newString = new st("Your New string");
+let newString = st("Your New string");
 
 //-- call a method to tame that fella
-newString.toCamelCase(); //- outputs: yourNewString
+newString.toCamelCase; //- outputs: yourNewString
 /* Other methods defined below */
 ```
 
 ## The Deets ##
-### toCamelCase() ###
+### toCamelCase ###
 Converts your string to Camel Case format, possibly the most common format in Javascript.
 ```
 const st = require("string-therapy");
-let newString = new st("Some String");
-newString.toCamelCase(); //- Outputs: someString
+let newString = st("Some String");
+newString.toCamelCase; //- Outputs: someString
 ```
-### toPascalCase() ###
+### toPascalCase ###
 Converts your string to Pascal Case format, used often for class naming and templates.
 ```
 const st = require("string-therapy");
-let newString = new st("Some String");
-newString.toPascalCase(); //- Outputs: SomeString
+let newString = st("Some String");
+newString.toPascalCase; //- Outputs: SomeString
 ```
-### toKebabCase() ###
+### toKebabCase ###
 Converts your string to Kebab Case format, used often in CSS.
 ```
 const st = require("string-therapy");
-let newString = new st("Some String");
-newString.toKebabCase(); //- Outputs: some-string
+let newString = st("Some String");
+newString.toKebabCase; //- Outputs: some-string
 ```
-### toSnakeCase() ###
+### toSnakeCase ###
 Converts your string to Snake Case format, often found for ID's and DB related keys.
 ```
 const st = require("string-therapy");
-let newString = new st("Some String");
-newString.toCamelCase(); //- Outputs: some_string
+let newString = st("Some String");
+newString.toCamelCase; //- Outputs: some_string
 ```
-### toEnglish() ###
+### toEnglish ###
 Not actually english but you get the gist, it's supposed to convert your already code friendly strings to "english" format with spaces and all.
 ```
 const st = require("string-therapy");
-let newString = new st("camelCaseString");
-newString.toEnglish(); //- Outputs: Camel case string
+let newString = st("camelCaseString");
+newString.toEnglish; //- Outputs: Camel case string
 ```
 
 ### Log ###
+- 2.0.0 - Using "getter" methods to help make things simpler
 - 1.0.0 - Support for digits at end of string and corrected issue detecting an underscore (_) in conversions
 - 0.1.0 - Declaration file for "import" support
 - 0.0.2 - README added
