@@ -1,10 +1,11 @@
-import StringInterface from "./index.d";
+import ST from "./index.d";
 
-class StringTherapy extends String implements StringInterface {
-    constructor(
-        private value:string
-    ) {
+class StringTherapy extends String implements ST {
+    private value:string;
+
+    constructor(value:string) {
         super(value);
+        this.value = value;
     }
 
     /**
@@ -104,8 +105,8 @@ class StringTherapy extends String implements StringInterface {
     }
 }
 
-function Init(str:string):StringTherapy {
+export default function Init(str:string):StringTherapy {
     return new StringTherapy(str);
 }
 
-exports.default = module.exports = Init;
+module.exports = Init;
