@@ -14,7 +14,7 @@ Next up, just add it into your project and use away!
 //-- slap this package into your project
 const st = require("string-therapy");
 //-or-//
-import st, {StringTherapy} from "string-therapy";
+import st from "string-therapy";
 
 //-- initiate it with your string
 let newString = st("Your New string");
@@ -62,6 +62,7 @@ newString.toEnglish; //- Outputs: Camel case string
 ```
 
 ### Log ###
+- 2.2.1 - Updated Readme
 - 2.2.0 - Code cleanup and restructure
 - 2.1.1 - Corrected "type" import
 - 2.1.0 - Corrected "import"
