@@ -62,6 +62,7 @@ newString.toEnglish; //- Outputs: Camel case string
 ```
 
 ### Log ###
+- 2.2.0 - Code cleanup and restructure
 - 2.1.1 - Corrected "type" import
 - 2.1.0 - Corrected "import"
 - 2.0.0 - Using "getter" methods to help make things simpler
