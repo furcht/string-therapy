@@ -1,4 +1,4 @@
 import { StringTherapy } from "./StringTherapy";
-declare function Init(str: string): StringTherapy;
-export = Init;
+declare const _default: (str: string) => StringTherapy;
+export = _default;
 //# sourceMappingURL=index.d.ts.map

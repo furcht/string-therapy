@@ -15,6 +15,9 @@ Next up, just add it into your project and use away!
 const st = require("string-therapy");
 //-or-//
 import st from "string-therapy";
+//-Import type for Typescript Use-//
+import { StringTherapy } from "string-therapy/lib/StringTherapy"; //- Typescript Use
+let newString:StringTherapy = st("Your New String");
 
 //-- initiate it with your string
 let newString = st("Your New string");
@@ -62,6 +65,7 @@ newString.toEnglish; //- Outputs: Camel case string
 ```
 
 ### Log ###
+- 2.2.2 - Code Cleanup; Optimizing for Typescript
 - 2.2.1 - Updated Readme
 - 2.2.0 - Code cleanup and restructure
 - 2.1.1 - Corrected "type" import

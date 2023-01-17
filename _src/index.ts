@@ -1,7 +1,2 @@
 import { StringTherapy } from "./StringTherapy";
-
-function Init(str:string):StringTherapy {
-    return new StringTherapy(str);
-}
-
-export = Init;
+export = (str:string):StringTherapy => new StringTherapy(str);

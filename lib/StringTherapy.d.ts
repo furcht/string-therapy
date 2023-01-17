@@ -1,5 +1,5 @@
 export declare class StringTherapy implements StringTherapyInterface {
-    private value;
+    #private;
     constructor(value: string);
     /**
      * Converts your string to Camel Case format

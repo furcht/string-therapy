@@ -1,8 +1,8 @@
 export class StringTherapy implements StringTherapyInterface {
-    private value:string;
+    #value:string;
 
     constructor(value:string) {
-        this.value = value;
+        this.#value = value;
     }
 
     /**
@@ -11,7 +11,7 @@ export class StringTherapy implements StringTherapyInterface {
      */
     get toCamelCase() {
         // remove spaces at ends
-        let str = this.value.trim().toLowerCase();
+        let str = this.#value.trim().toLowerCase();
 
         // remove special characters or digits at beginning of string
         str = str.replace(/^(?:\W+|\d)+/g, '').replace("_","-");
@@ -31,7 +31,7 @@ export class StringTherapy implements StringTherapyInterface {
      */
     get toPascalCase() {
         // remove spaces at ends
-        let str = this.value.trim().toLowerCase();
+        let str = this.#value.trim().toLowerCase();
 
         // remove special characters or digits at beginning of string
         str = str.replace(/^(?:\W+|\d|_)+/g, '').replace("_","-");
@@ -51,7 +51,7 @@ export class StringTherapy implements StringTherapyInterface {
      */
     get toSnakeCase() {
         // remove spaces at ends and lower case all characters
-        let str = this.value.trim().toLowerCase();
+        let str = this.#value.trim().toLowerCase();
 
         // remove special characters or digits at beginning of string
         str = str.replace(/^(?:\W+|\d)+/g, '');
@@ -66,7 +66,7 @@ export class StringTherapy implements StringTherapyInterface {
      */
     get toKebabCase() {
         // remove spaces at ends and lower case all characters
-        let str = this.value.trim().toLowerCase();
+        let str = this.#value.trim().toLowerCase();
 
         // remove special characters or digits at beginning of string
         str = str.replace(/^(?:\W+|\d)+/g, '');
@@ -81,7 +81,7 @@ export class StringTherapy implements StringTherapyInterface {
      */
     get toEnglish() {
         // remove spaces at ends and lower case all characters
-        let str = this.value.trim().toLowerCase();
+        let str = this.#value.trim().toLowerCase();
 
         // remove special characters at beginning or end of string
         str = str.replace(/^(?:\W+|_)+|(?:\W+)+$/g, '');
